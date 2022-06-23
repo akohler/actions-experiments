@@ -1,0 +1,19 @@
+name: Experiments
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build_for_docker_hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Show environment
+        run:  env
+    
