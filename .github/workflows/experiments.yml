@@ -17,7 +17,8 @@ jobs:
       - name: Read chart yaml
         id: yaml-data
         uses: KJ002/read-yaml@1.6
-          with: 'charts/test.yaml'
+        with: 
+          file: 'charts/test.yaml'
           key-path: '["image", "using"]'
 
       - name: Display yaml info
