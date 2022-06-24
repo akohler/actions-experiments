@@ -19,7 +19,7 @@ jobs:
         uses: KJ002/read-yaml@1.6
         with: 
           file: 'charts/test.yaml'
-          key-path: '["image", "using"]'
+          key-path: '["image", "tag"]'
 
       - name: Display yaml info
         run: echo "${{ steps.yaml-data.outputs.data }}"    
